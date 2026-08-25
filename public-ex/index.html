@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat with EX GF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="chat-shell">
+    <header class="chat-header"><div class="avatar" id="avatar">E<span></span></div><div><p class="overline">private conversation</p><h1 id="simuName">EX GF</h1><p class="status"><i></i> probably online</p></div><div class="header-actions"><button class="header-action" id="clearChat" title="Clear conversation">Clear</button><button class="settings-button" id="settingsButton" title="Open settings" aria-label="Open settings">⚙</button></div></header>
+    <div class="memory-strip"><span id="memoryLabel">EX GF'S NOTE</span><strong>“Don't overthink it, bubu.”</strong></div>
+    <section class="messages" id="messages"></section>
+    <form class="composer" id="chatForm"><input id="messageInput" autocomplete="off" placeholder="Message EX GF..." aria-label="Message EX GF" /><button id="sendButton" aria-label="Send message"><span>↗</span></button></form>
+    <p class="fine-print">A fictional AI character for a private, playful conversation.</p>
+  </main>
+  <div class="settings-backdrop" id="settingsBackdrop" hidden>
+    <section class="settings-panel" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <div class="settings-heading"><div><p class="overline">personalize</p><h2 id="settingsTitle">EX GF settings</h2></div><button class="close-settings" id="closeSettings" aria-label="Close settings">×</button></div>
+      <form id="settingsForm">
+        <label>Your EX's name<input id="nameSetting" type="text" maxlength="40" placeholder="Enter your EX's name" /></label>
+        <label>Character instructions<textarea id="instructionSetting" rows="8" placeholder="Add personality details or conversation instructions..."></textarea></label>
+        <label>Personal Gemini API key<input id="keySetting" type="password" placeholder="Enter your Gemini API key" autocomplete="off" /></label>
+        <label>Chatbot gender<select id="genderSetting"><option value="female">Female</option><option value="male">Male</option><option value="non-binary">Non-binary</option></select></label>
+        <label>Theme<select id="themeSetting"><option value="rose">Rose dusk</option><option value="violet">Violet night</option><option value="midnight">Midnight blue</option><option value="ocean">Ocean teal</option><option value="forest">Forest green</option><option value="sunset">Sunset coral</option><option value="mono">Monochrome</option><option value="light">Soft light</option></select></label>
+        <p class="settings-status" id="settingsStatus" role="status"></p>
+        <div class="settings-actions"><button type="button" class="danger-button" id="deleteHistory">Delete history</button><button type="submit" class="save-button">Save settings</button></div>
+      </form>
+      <p class="settings-note">Your settings and personal key stay in this browser. The key is sent only when you send a message.</p>
+    </section>
+  </div>
+  <script src="/app.js?v=2"></script>
+</body>
+</html>
